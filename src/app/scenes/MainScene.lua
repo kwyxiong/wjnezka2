@@ -11,7 +11,7 @@ function MainScene:ctor()
     --     :addTo(self)
 
   	local light = 0.8
-    local sp = display.newSprite("jiguan2.png")
+    local sp = display.newSprite("shenti.png")
     	:pos(360, 500)
     	:addTo(self)
     -- sp:setOpacity(0.1)
@@ -23,8 +23,8 @@ function MainScene:ctor()
    	self:runAction(cc.RepeatForever:create(cc.Sequence:create(
    			cc.DelayTime:create(0.016),
    			cc.CallFunc:create(function() 
-				   	sp:getGLProgramState():setUniformFloat("light", light)
-				   	light = light + 0.01	
+				   	-- sp:getGLProgramState():setUniformFloat("light", light)
+				   	-- light = light + 0.01	
    				end)
    		)))
    	local sp1 = display.newSprite("jiguan2.png")
@@ -35,8 +35,8 @@ function MainScene:ctor()
    	self:runAction(cc.RepeatForever:create(cc.Sequence:create(
    			cc.DelayTime:create(0.016),
    			cc.CallFunc:create(function() 
-				   	sp1:getGLProgramState():setUniformFloat("blurRadius", index)
-				   	index = index + 1	
+				   	-- sp1:getGLProgramState():setUniformFloat("blurRadius", index)
+				   	-- index = index + 1	
    				end)
    		)))
 end
