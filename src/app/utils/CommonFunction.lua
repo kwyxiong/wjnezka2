@@ -20,3 +20,27 @@ Global_vertDefaultSource = "\n"..
 "v_fragmentColor = a_color;\n"..
 "v_texCoord = a_texCoord;\n"..
 "}"
+
+Global_part = {
+	faxing = {""},
+	shenti = {},
+}
+
+Global_res = {
+	"toufahou",
+	"shenti",
+	"toufaqian",
+	"lianyizhuang",
+	"meimao",
+	"neiyi",
+	"qunzihou",
+	"shangzhuang",
+	"shipin",
+	"shipinhou",
+	"waitaohou",
+	"wazi",
+	"xiazhuang",
+	"xiezi",
+	"yanjing",
+	"zuiba",
+}
