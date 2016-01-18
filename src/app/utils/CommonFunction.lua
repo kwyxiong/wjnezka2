@@ -21,10 +21,16 @@ Global_vertDefaultSource = "\n"..
 "v_texCoord = a_texCoord;\n"..
 "}"
 
-Global_part = {
-	faxing = {""},
-	shenti = {},
-}
+-- Global_part = {
+-- 	{name = "发型", pages = {"发型"}},
+-- 	{name = "上装", pages = {"上衣", "外套"}},
+-- 	{name = "下装", pages = {"裤子", "裙子", "及腰装"}},
+-- 	{name = "连衣装", pages = {"发型"}},
+-- 	{name = "鞋袜", pages = {"发型"}},
+-- 	{name = "饰品", pages = {"发型"}},
+-- 	{name = "美容", pages = {"发型"}},
+-- }
+
 
 Global_res = {
 	"toufahou",
