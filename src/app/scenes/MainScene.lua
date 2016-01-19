@@ -8,14 +8,14 @@ end)
 
 function MainScene:ctor()
 	self:initBg()
-  self:initBody()
-  self:initMainUI()
-  -- self:test()
+	-- self:initBody()
+	self:initMainUI()
+	-- self:test()
     -- cc.ui.UILabel.new({
     --         UILabelType = 2, text = "Hello, World", size = 64})
     --     :align(display.CENTER, display.cx, display.cy)
     --     :addTo(self)
-
+    -- dump(G_EXCEL_TABLE_zOrders, "G_EXCEL_TABLE_zOrders")
 end
 
 function MainScene:test()
