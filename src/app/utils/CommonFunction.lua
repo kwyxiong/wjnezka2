@@ -50,3 +50,30 @@ Global_res = {
 	"yanjing",
 	"zuiba",
 }
+
+function whiteSprite(sprite, light)
+    local fileUtiles = cc.FileUtils:getInstance()
+    local vertSource = Global_vertDefaultSource
+    local fragSource = fileUtiles:getStringFromFile("shaders/example_white.fsh")
+    local glProgam = cc.GLProgram:createWithByteArrays(vertSource,fragSource)
+    local glprogramstate = cc.GLProgramState:getOrCreateWithGLProgram(glProgam)
+    -- dump(sprite:getTextureRect())
+    sprite:setGLProgramState(glprogramstate)
+   	sprite:getGLProgramState():setUniformFloat("light", light or 1)
+
+end
+
+
+function blurSprite(sprite, blurRadius)
+
+    local fileUtiles = cc.FileUtils:getInstance()
+    local vertSource = Global_vertDefaultSource
+    local fragSource = fileUtiles:getStringFromFile("shaders/example_Blur.fsh")
+    local glProgam = cc.GLProgram:createWithByteArrays(vertSource,fragSource)
+    local glprogramstate = cc.GLProgramState:getOrCreateWithGLProgram(glProgam)
+    -- dump(sprite:getTextureRect())
+    local resolution = cc.p(sprite:getTextureRect().width, sprite:getTextureRect().height)
+    sprite:setGLProgramState(glprogramstate)
+    sprite:getGLProgramState():setUniformVec2("resolution", resolution)	
+    sprite:getGLProgramState():setUniformFloat("blurRadius", blurRadius or 1)
+end
