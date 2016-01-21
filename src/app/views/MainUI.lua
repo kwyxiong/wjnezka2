@@ -17,9 +17,12 @@ end
 
 
 function MainUI:init()
-	local bg = display.newScale9Sprite("scale9_1.png", 0, 0, cc.size(380, 520), cc.rect(35, 35,10,10))
+	local bg = display.newScale9Sprite("scale9_1.png", 0, 0, cc.size(420, 520), cc.rect(35, 35,10,10))
 		:addTo(self)
 
+	local bg = display.newScale9Sprite("scale9_1.png", 0, 0, cc.size(80, 520), cc.rect(35, 35,10,10))
+		:pos(-170, 0)
+		:addTo(self)
 
 	local myPageView = MyPageView.new()
 		:pos(20, 0)
@@ -27,7 +30,7 @@ function MainUI:init()
 	for k = 1, 7 do
 		myPageView:addItemData({})
 		local button = MainUIButton.new("button".. k ..".png")
-		:pos(0, 250 + (k-1)*(-70))
+		:pos(-170, 215 + (k-1)*(-70))
 		:addTo(self)
 		:onButtonClicked(function(event) 
 			-- dump(event)
