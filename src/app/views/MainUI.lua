@@ -26,14 +26,18 @@ function MainUI:init()
 		-- :addTo(self)
 	for k = 1, 7 do
 		myPageView:addItemData({})
-	end
-	-- myPageView:showPage(1)
-
-	local button = MainUIButton.new("button2.png")
+		local button = MainUIButton.new("button".. k ..".png")
+		:pos(0, 250 + (k-1)*(-70))
 		:addTo(self)
 		:onButtonClicked(function(event) 
 			-- dump(event)
-		end)	
+		end)
+		button:setScale(7/8)
+	end
+	-- myPageView:showPage(1)
+
+
+	
 	
 end
 
