@@ -12,8 +12,25 @@ function MyApp:ctor()
 end
 
 function MyApp:run()
+	local addPaths = {
+	"toufahou",
+	"shenti",
+	"neiyi",
+	"yanjing",
+	"meimao",
+	"wazi",
+	"xiazhuang",
+	"xiezi",
+	"lianyizhuang",
+	"shangzhuang",
+	"toufaqian",
+	"shipin",
+	}
     cc.FileUtils:getInstance():addSearchPath("res/")
-    self:enterScene("MainScene")
+    for k, v in ipairs(addPaths) do
+    	 cc.FileUtils:getInstance():addSearchPath("res/" .. v .."/")
+    end
+    self:enterScene("LoadingScene")
 end
 
 return MyApp

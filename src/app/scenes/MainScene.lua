@@ -8,7 +8,7 @@ end)
 
 function MainScene:ctor()
 	self:initBg()
-	-- self:initBody()
+	self:initBody()
 	self:initMainUI()
 	-- self:test()
     -- cc.ui.UILabel.new({
@@ -88,7 +88,7 @@ end
 
 function MainScene:initBody()
   local body = Body.new()
-    :pos(display.cx - 110, display.cy - 40)
+    :pos(display.cx - 140, display.cy - 40)
     :addTo(self)
 end
 

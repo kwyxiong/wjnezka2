@@ -26,7 +26,7 @@ function MyPageView:init()
 end
 
 function MyPageView:createItemByData(itemData)
-	local viewBox = ViewBox.new()
+	local viewBox = ViewBox.new(itemData)
 	return viewBox
 end
 
@@ -47,21 +47,24 @@ function MyPageView:showPage(pageIndex)
 	local maxIndex = (pageIndex - 1)*self.numPerPage + 9
 	for k = minIndex, maxIndex do
 		if k <= #self.itemDatas then
-			if not self.items[k] then
-				local item = self:createItemByData(itemData)
+			-- if not self.items[k] then
+				local item = self:createItemByData(self.itemDatas[k])
 					:pos((index-1)%self.col*self.disX + self.firstPosX, math.floor((index-1) / self.col) *(-self.disY) + self.firstPosY)
 					:addTo(self)
 				self.items[k] = item
 				index = index + 1
 				-- dump(cc.p(item:getPosition()))
-			end
 		end
 	end
+	-- dump(self.items, "self.items")
 	for k = 1, #self.itemDatas do
-		if k >= minIndex and k <= maxIndex then
-			self.items[k]:setVisible(true)
-		else
-			self.items[k]:setVisible(false)
+		if self.items[k] then
+			if k >= minIndex and k <= maxIndex then
+				self.items[k]:setVisible(true)
+			else
+				-- print("k", k)
+				self.items[k]:setVisible(false)
+			end
 		end
 	end
 end

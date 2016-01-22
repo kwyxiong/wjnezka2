@@ -11,16 +11,38 @@ local ViewBox = class("ViewBox", function()
 	end)
 ViewBox.width = 100
 ViewBox.height = 140
-function ViewBox:ctor()
-
+function ViewBox:ctor(arg)
+	self.data = arg
 	self:init()
 end
 
 function ViewBox:init()
 	self:setClippingRegion(cc.rect(-self.width/2, -self.height/2, self.width, self.height))
-	local sp = display.newSprite("bg1.jpg")
+	local sp = display.newSprite("shenti.png")
+		:zorder(gz("shenti"))
+		:pos(10, -170)
 		:addTo(self)
-	-- self:setAnchorPoint(cc.p(0, 0))
+	sp:setScale(0.35)
+	whiteSprite(sp, 0.8)
+	-- print(self.data["reses"])
+	local reses = json.decode(self.data["reses"])
+	local zOrders = json.decode(self.data["zOrders"])
+	-- self:setAnchorPoint(cc.pjson.decode(self.data["reses"])(0, 0))
+	for k, v in ipairs(reses) do
+		-- local toufa = cc.Sprite:createWithSpriteFrameName(v .. ".png");
+		local toufa = display.newSprite("#" .. v .. ".png")
+		-- local toufa = display.newSprite(v .. ".png")
+		toufa:zorder(gz(zOrders[k]))
+			:pos(10, -170)
+			:addTo(self)
+		toufa:setScale(0.35)
+		-- print("aaaaaaaa")
+	end
+	-- dump(reses, "reses")
+	-- drug(sp)
+	local button = cc.ui.UIPushButton.new({normal = "box1.png", pressed = "box2.png"})
+		:zorder(99)
+		:addTo(self)
 end
 
 return ViewBox

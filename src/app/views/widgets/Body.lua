@@ -9,12 +9,19 @@ local Body = class("Body", function()
 function Body:ctor()
 
 	self:init()
+	self:setScale(0.43)
 end
 
 function Body:init()
 	local shenti = display.newSprite("shenti.png")
+		:zorder(gz("shenti"))
 		:addTo(self)
-	self:setScale(0.43)
+	
+
+	local neiyi = display.newSprite("neiyi_qingmu1.png")
+		:zorder(gz("neiyi"))
+		:addTo(self)
+	
 end
 
 

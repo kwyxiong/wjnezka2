@@ -9,11 +9,24 @@ local MainUI = class("MainUI", function()
 	end)
 
 function MainUI:ctor()
-
+	self.partData = {
+		G_EXCEL_TABLE_faxing
+	}
+	self.myPageViews = {}
 	self:init()
 end
 
-
+function MainUI:initLeftButton()
+	for k = 1, 7 do
+		local button = MainUIButton.new("button".. k ..".png")
+		:pos(-170, 215 + (k-1)*(-70))
+		:addTo(self)
+		:onButtonClicked(function(event) 
+			-- dump(event)
+		end)
+		button:setScale(7/8)
+	end
+end
 
 
 function MainUI:init()
@@ -24,24 +37,25 @@ function MainUI:init()
 		:pos(-170, 0)
 		:addTo(self)
 
-	local myPageView = MyPageView.new()
-		:pos(20, 0)
-		-- :addTo(self)
-	for k = 1, 7 do
-		myPageView:addItemData({})
-		local button = MainUIButton.new("button".. k ..".png")
-		:pos(-170, 215 + (k-1)*(-70))
-		:addTo(self)
-		:onButtonClicked(function(event) 
-			-- dump(event)
-		end)
-		button:setScale(7/8)
+	self:initLeftButton()
+
+	self:showPart(1)
+	
+end
+
+function MainUI:showPart(index)
+	if not self.myPageViews[index] then
+		local myPageView =  MyPageView.new()
+			:pos(40, 0)
+			:addTo(self)
+			-- dump(self.partData[index])
+		for k, v in ipairs(self.partData[index]) do
+			myPageView:addItemData(v)
+		end
+		self.myPageViews[index] = myPageView
 	end
-	-- myPageView:showPage(1)
-
-
 	
-	
+	self.myPageViews[index]:showPage(1)
 end
 
 

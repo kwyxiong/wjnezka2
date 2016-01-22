@@ -32,24 +32,35 @@ Global_vertDefaultSource = "\n"..
 -- }
 
 
-Global_res = {
+
+local zOrders = {
 	"toufahou",
 	"shenti",
-	"toufaqian",
-	"lianyizhuang",
-	"meimao",
 	"neiyi",
-	"qunzihou",
-	"shangzhuang",
-	"shipin",
-	"shipinhou",
-	"waitaohou",
+	"yanjing",
+	"meimao",
 	"wazi",
 	"xiazhuang",
 	"xiezi",
-	"yanjing",
-	"zuiba",
+	"lianyizhuang",
+	"shangzhuang",
+	"toufaqian",
+	"shipin",
 }
+
+local function transZOrder(tb)
+	local res = {}
+	for k, v in ipairs(tb) do
+		res[v] = k
+	end
+	return res
+end
+
+Global_zOrder = transZOrder(zOrders)
+
+function gz(str)
+	return Global_zOrder[str]
+end
 
 function whiteSprite(sprite, light)
     local fileUtiles = cc.FileUtils:getInstance()
@@ -76,4 +87,25 @@ function blurSprite(sprite, blurRadius)
     sprite:setGLProgramState(glprogramstate)
     sprite:getGLProgramState():setUniformVec2("resolution", resolution)	
     sprite:getGLProgramState():setUniformFloat("blurRadius", blurRadius or 1)
+end
+
+function drug(node)
+	-- local isDrugging = false
+	node:addNodeEventListener(cc.NODE_TOUCH_EVENT,function(event_)
+
+        if event_.name == "ended" then
+        	-- if self.arg.sellMode then
+        
+			-- end
+			--dump(CENTER_OFFSET,"CENTER_OFFSET")
+			dump(cc.p(node:getPosition()))
+		elseif event_.name == "moved"  then
+			node:setPosition(event_)
+        elseif event_.name == "began"  then
+        	-- isDrugging = true
+        	return true
+        end
+    end)
+    node:setTouchEnabled(true)
+    node:setTouchSwallowEnabled(false)
 end
