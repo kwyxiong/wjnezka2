@@ -33,6 +33,7 @@ Global_vertDefaultSource = "\n"..
 
 
 
+
 local zOrders = {
 	"toufahou",
 	"shenti",
@@ -70,7 +71,7 @@ function whiteSprite(sprite, light)
     local glprogramstate = cc.GLProgramState:getOrCreateWithGLProgram(glProgam)
     -- dump(sprite:getTextureRect())
     sprite:setGLProgramState(glprogramstate)
-   	sprite:getGLProgramState():setUniformFloat("light", light or 1)
+   	sprite:getGLProgramState():setUniformFloat("light", light or 1.0)
 
 end
 
@@ -86,7 +87,7 @@ function blurSprite(sprite, blurRadius)
     local resolution = cc.p(sprite:getTextureRect().width, sprite:getTextureRect().height)
     sprite:setGLProgramState(glprogramstate)
     sprite:getGLProgramState():setUniformVec2("resolution", resolution)	
-    sprite:getGLProgramState():setUniformFloat("blurRadius", blurRadius or 1)
+    sprite:getGLProgramState():setUniformFloat("blurRadius", blurRadius or 1.0)
 end
 
 function drug(node)

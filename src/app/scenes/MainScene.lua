@@ -79,11 +79,16 @@ function MainScene:blurSprite(sprite)
 end
 
 function MainScene:initBg()
-	local bg = display.newSprite("bg1.jpg")
-    :pos(display.cx, display.cy)
-		:addTo(self)
+	-- local bg = display.newSprite("bg1.jpg")
+	-- local bg = cc.Sprite:create("bg1.jpg")
+ --    bg:pos(display.cx, display.cy)
+	-- 	:addTo(self)
 	-- bg:setAnchorPoint(cc.p(0, 0))
-
+	-- local path = cc.FileUtils:getInstance():fullPathForFilename("farm.jpg")
+	-- print("papath",path)
+	local bg = display.newSprite("bg1.jpg")
+    	:pos(display.cx, display.cy)
+		:addTo(self)
 end
 
 function MainScene:initBody()
