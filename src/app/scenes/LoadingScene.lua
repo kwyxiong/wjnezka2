@@ -88,6 +88,7 @@ function LoadingScene:ctor()
     local allNum = #allRes
     local function imageLoaded(texture)
     	loadedNum = loadedNum + 1
+    	print("loadedNum",loadedNum)
     	loadingBar:setPercent(math.floor(loadedNum/allNum*100))
     	if loadedNum == allNum then
     		self:loadOver()
@@ -98,13 +99,13 @@ function LoadingScene:ctor()
     	 -- cc.Director:getInstance():getTextureCache():addImageAsync(
       --               v .. ".png", imageLoaded)
 		-- display.addSpriteFrames(v .. ".plist", v .. ".pvr.ccz")
-    	 display.addSpriteFrames(v .. ".plist", v .. ".pvr.ccz")
+    	 display.addSpriteFrames(v .. ".plist", v .. ".pvr.ccz", imageLoaded)
     	 -- cc.SpriteFrameCache:getInstance():addSpriteFrames(v .. ".plist", v .. ".pvr.ccz");
     end
-    self:runAction(cc.Sequence:create(
-    		-- cc.DelayTime:create(0.016),
-    		cc.CallFunc:create(handler(self, self.loadOver))
-    	))	
+    -- self:runAction(cc.Sequence:create(
+    -- 		-- cc.DelayTime:create(0.016),
+    -- 		cc.CallFunc:create(handler(self, self.loadOver))
+    -- 	))	
     -- self:loadOver()
 end
 

@@ -2,8 +2,9 @@
 require("config")
 require("cocos.init")
 require("framework.init")
-require("app.utils.CommonFunction")
+require("app.utils.init")
 require("app.data.init")
+require("app.managers.init")
 
 local MyApp = class("MyApp", cc.mvc.AppBase)
 

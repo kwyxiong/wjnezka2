@@ -65905,35 +65905,8 @@ int lua_cocos2dx_SpriteFrameCache_addSpriteFramesWithFile(lua_State* tolua_S)
     }
 #endif
     argc = lua_gettop(tolua_S)-1;
-    do{
-        if (argc == 2) {
-            std::string arg0;
-            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.SpriteFrameCache:addSpriteFramesWithFile");
-
-            if (!ok) { break; }
-            std::string arg1;
-            ok &= luaval_to_std_string(tolua_S, 3,&arg1, "cc.SpriteFrameCache:addSpriteFramesWithFile");
-
-            if (!ok) { break; }
-            cobj->addSpriteFramesWithFile(arg0, arg1);
-            lua_settop(tolua_S, 1);
-            return 1;
-        }
-    }while(0);
-    ok  = true;
-    do{
-        if (argc == 1) {
-            std::string arg0;
-            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.SpriteFrameCache:addSpriteFramesWithFile");
-
-            if (!ok) { break; }
-            cobj->addSpriteFramesWithFile(arg0);
-            lua_settop(tolua_S, 1);
-            return 1;
-        }
-    }while(0);
-    ok  = true;
-    do{
+   
+ do{
         if (argc == 2) {
             std::string arg0;
             ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.SpriteFrameCache:addSpriteFramesWithFile");
@@ -65949,6 +65922,38 @@ int lua_cocos2dx_SpriteFrameCache_addSpriteFramesWithFile(lua_State* tolua_S)
         }
     }while(0);
     ok  = true;
+   
+    do{
+        if (argc == 1) {
+            std::string arg0;
+            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.SpriteFrameCache:addSpriteFramesWithFile");
+
+            if (!ok) { break; }
+            cobj->addSpriteFramesWithFile(arg0);
+            lua_settop(tolua_S, 1);
+            return 1;
+        }
+    }while(0);
+    ok  = true;
+
+ do{
+        if (argc == 2) {
+            std::string arg0;
+            ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.SpriteFrameCache:addSpriteFramesWithFile");
+
+            if (!ok) { break; }
+            std::string arg1;
+            ok &= luaval_to_std_string(tolua_S, 3,&arg1, "cc.SpriteFrameCache:addSpriteFramesWithFile");
+
+            if (!ok) { break; }
+            cobj->addSpriteFramesWithFile(arg0, arg1);
+            lua_settop(tolua_S, 1);
+            return 1;
+        }
+    }while(0);
+    ok  = true;
+
+   
     luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n",  "cc.SpriteFrameCache:addSpriteFramesWithFile",argc, 2);
     return 0;
 
