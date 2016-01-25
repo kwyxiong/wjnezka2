@@ -81,9 +81,11 @@ function LoadingScene:ctor()
 
  	-- 	end
  	-- end
- 	local allRes = {"toufahou0", "toufahou1",
- 	 "toufaqian0"}
-
+ 	-- local allRes = {"toufahou_0", "toufahou_1",
+ 	--  "toufaqian_0"}
+ 	local allRes = {"toufahou_88880", "toufahou_88881",
+ 	 "toufaqian_88880"}
+  	-- local allRes = {"aa0"}	 
     local loadedNum = 0
     local allNum = #allRes
     local function imageLoaded(texture)
@@ -98,8 +100,8 @@ function LoadingScene:ctor()
     for k, v in ipairs(allRes) do
     	 -- cc.Director:getInstance():getTextureCache():addImageAsync(
       --               v .. ".png", imageLoaded)
-		-- display.addSpriteFrames(v .. ".plist", v .. ".pvr.ccz")
-    	 display.addSpriteFrames(v .. ".plist", v .. ".pvr.ccz", imageLoaded)
+		display.addSpriteFrames(v .. ".plist", v .. ".pvr.ccz", imageLoaded)
+    	 -- display.addSpriteFrames(v .. ".plist", v .. ".png", imageLoaded)
     	 -- cc.SpriteFrameCache:getInstance():addSpriteFrames(v .. ".plist", v .. ".pvr.ccz");
     end
     -- self:runAction(cc.Sequence:create(

@@ -28,6 +28,9 @@ function MyApp:run()
 	"shipin",
 	}
     cc.FileUtils:getInstance():addSearchPath("res/")
+    cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())
+    
+
     for k, v in ipairs(addPaths) do
     	 cc.FileUtils:getInstance():addSearchPath("res/" .. v .."/")
     end

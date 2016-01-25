@@ -36,7 +36,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../toufaqian - 副本/toufaqian{n}.pvr.ccz</filename>
+        <filename>../toufaqian - 副本/toufaqian_8888{n}.pvr.ccz</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -127,7 +127,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../toufaqian - 副本/toufaqian{n}.plist</filename>
+                <filename>../toufaqian - 副本/toufaqian_8888{n}.plist</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -166,56 +166,56 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../toufaqian - 副本/toufaqian_leno1-3.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno2-0.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno2-1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno2-2.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno3-0.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno3-1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno4.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno5.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno6.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno7.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno8.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno9.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno10.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_luqi1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_meilu1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu2.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu3.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu4.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu5.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu6.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu7.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu8-0.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_ningzhu8-1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu2.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu3.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu4.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu5.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu6.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu7.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu8.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu9.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu10.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu11.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_qingmu12.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_shasha1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_sw1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_wanjie1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_an1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_biaoge1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_fanzi1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_fanzi2-0.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_fanzi2-1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_huangbaba1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_jiguan1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_jiguan2.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno1-0.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno1-1.png</filename>
-            <filename>../toufaqian - 副本/toufaqian_leno1-2.png</filename>
+            <filename>toufaqian_qingmu5.png</filename>
+            <filename>toufaqian_qingmu6.png</filename>
+            <filename>toufaqian_qingmu7.png</filename>
+            <filename>toufaqian_qingmu8.png</filename>
+            <filename>toufaqian_qingmu9.png</filename>
+            <filename>toufaqian_qingmu10.png</filename>
+            <filename>toufaqian_qingmu11.png</filename>
+            <filename>toufaqian_qingmu12.png</filename>
+            <filename>toufaqian_shasha1.png</filename>
+            <filename>toufaqian_sw1.png</filename>
+            <filename>toufaqian_wanjie1.png</filename>
+            <filename>toufaqian_an1.png</filename>
+            <filename>toufaqian_biaoge1.png</filename>
+            <filename>toufaqian_fanzi1.png</filename>
+            <filename>toufaqian_fanzi2-0.png</filename>
+            <filename>toufaqian_fanzi2-1.png</filename>
+            <filename>toufaqian_huangbaba1.png</filename>
+            <filename>toufaqian_jiguan1.png</filename>
+            <filename>toufaqian_jiguan2.png</filename>
+            <filename>toufaqian_leno1-0.png</filename>
+            <filename>toufaqian_leno1-1.png</filename>
+            <filename>toufaqian_leno1-2.png</filename>
+            <filename>toufaqian_leno1-3.png</filename>
+            <filename>toufaqian_leno2-0.png</filename>
+            <filename>toufaqian_leno2-1.png</filename>
+            <filename>toufaqian_leno2-2.png</filename>
+            <filename>toufaqian_leno3-0.png</filename>
+            <filename>toufaqian_leno3-1.png</filename>
+            <filename>toufaqian_leno4.png</filename>
+            <filename>toufaqian_leno5.png</filename>
+            <filename>toufaqian_leno6.png</filename>
+            <filename>toufaqian_leno7.png</filename>
+            <filename>toufaqian_leno8.png</filename>
+            <filename>toufaqian_leno9.png</filename>
+            <filename>toufaqian_leno10.png</filename>
+            <filename>toufaqian_luqi1.png</filename>
+            <filename>toufaqian_meilu1.png</filename>
+            <filename>toufaqian_ningzhu1.png</filename>
+            <filename>toufaqian_ningzhu2.png</filename>
+            <filename>toufaqian_ningzhu3.png</filename>
+            <filename>toufaqian_ningzhu4.png</filename>
+            <filename>toufaqian_ningzhu5.png</filename>
+            <filename>toufaqian_ningzhu6.png</filename>
+            <filename>toufaqian_ningzhu7.png</filename>
+            <filename>toufaqian_ningzhu8-0.png</filename>
+            <filename>toufaqian_ningzhu8-1.png</filename>
+            <filename>toufaqian_qingmu1.png</filename>
+            <filename>toufaqian_qingmu2.png</filename>
+            <filename>toufaqian_qingmu3.png</filename>
+            <filename>toufaqian_qingmu4.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

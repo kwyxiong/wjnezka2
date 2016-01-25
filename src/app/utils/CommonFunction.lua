@@ -35,6 +35,8 @@ Global_vertDefaultSource = "\n"..
 
 
 local zOrders = {
+	"none",
+	"bg",
 	"toufahou",
 	"shenti",
 	"neiyi",
@@ -47,6 +49,7 @@ local zOrders = {
 	"shangzhuang",
 	"toufaqian",
 	"shipin",
+	"mainUI",
 }
 
 local function transZOrder(tb)
@@ -83,7 +86,7 @@ function blurSprite(sprite, blurRadius)
     local fragSource = fileUtiles:getStringFromFile("shaders/example_Blur.fsh")
     local glProgam = cc.GLProgram:createWithByteArrays(vertSource,fragSource)
     local glprogramstate = cc.GLProgramState:getOrCreateWithGLProgram(glProgam)
-    dump(sprite:getTextureRect())
+    -- dump(sprite:getTextureRect())
     local resolution = cc.p(sprite:getTextureRect().width, sprite:getTextureRect().height)
     sprite:setGLProgramState(glprogramstate)
     sprite:getGLProgramState():setUniformVec2("resolution", resolution)	

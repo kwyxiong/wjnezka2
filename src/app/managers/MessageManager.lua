@@ -18,7 +18,7 @@ _MSG_DISPATCHER:addComponent("components.behavior.EventProtocol"):exportMethods(
 
 -- 广播消息
 function broadCastMsg(name, data)
-	print("broadCastMsg " ..name)
+	-- print("broadCastMsg " ..name)
 	_MSG_DISPATCHER:dispatchEvent({name = name, data = data})
 end
 
