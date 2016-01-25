@@ -36,7 +36,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../toufaqian - 副本/toufaqian_8888{n}.pvr.ccz</filename>
+        <filename>toufaqian{n}.pvr.ccz</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -90,7 +90,7 @@
             <key>sizeConstraints</key>
             <enum type="AlgorithmSettings::SizeConstraints">POT</enum>
             <key>forceSquared</key>
-            <true/>
+            <false/>
             <key>forceWordAligned</key>
             <false/>
             <key>maxRects</key>
@@ -127,7 +127,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../toufaqian - 副本/toufaqian_8888{n}.plist</filename>
+                <filename>toufaqian{n}.plist</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -166,6 +166,27 @@
         </struct>
         <key>fileList</key>
         <array>
+            <filename>toufaqian_leno5.png</filename>
+            <filename>toufaqian_leno6.png</filename>
+            <filename>toufaqian_leno7.png</filename>
+            <filename>toufaqian_leno8.png</filename>
+            <filename>toufaqian_leno9.png</filename>
+            <filename>toufaqian_leno10.png</filename>
+            <filename>toufaqian_luqi1.png</filename>
+            <filename>toufaqian_meilu1.png</filename>
+            <filename>toufaqian_ningzhu1.png</filename>
+            <filename>toufaqian_ningzhu2.png</filename>
+            <filename>toufaqian_ningzhu3.png</filename>
+            <filename>toufaqian_ningzhu4.png</filename>
+            <filename>toufaqian_ningzhu5.png</filename>
+            <filename>toufaqian_ningzhu6.png</filename>
+            <filename>toufaqian_ningzhu7.png</filename>
+            <filename>toufaqian_ningzhu8-0.png</filename>
+            <filename>toufaqian_ningzhu8-1.png</filename>
+            <filename>toufaqian_qingmu1.png</filename>
+            <filename>toufaqian_qingmu2.png</filename>
+            <filename>toufaqian_qingmu3.png</filename>
+            <filename>toufaqian_qingmu4.png</filename>
             <filename>toufaqian_qingmu5.png</filename>
             <filename>toufaqian_qingmu6.png</filename>
             <filename>toufaqian_qingmu7.png</filename>
@@ -195,27 +216,6 @@
             <filename>toufaqian_leno3-0.png</filename>
             <filename>toufaqian_leno3-1.png</filename>
             <filename>toufaqian_leno4.png</filename>
-            <filename>toufaqian_leno5.png</filename>
-            <filename>toufaqian_leno6.png</filename>
-            <filename>toufaqian_leno7.png</filename>
-            <filename>toufaqian_leno8.png</filename>
-            <filename>toufaqian_leno9.png</filename>
-            <filename>toufaqian_leno10.png</filename>
-            <filename>toufaqian_luqi1.png</filename>
-            <filename>toufaqian_meilu1.png</filename>
-            <filename>toufaqian_ningzhu1.png</filename>
-            <filename>toufaqian_ningzhu2.png</filename>
-            <filename>toufaqian_ningzhu3.png</filename>
-            <filename>toufaqian_ningzhu4.png</filename>
-            <filename>toufaqian_ningzhu5.png</filename>
-            <filename>toufaqian_ningzhu6.png</filename>
-            <filename>toufaqian_ningzhu7.png</filename>
-            <filename>toufaqian_ningzhu8-0.png</filename>
-            <filename>toufaqian_ningzhu8-1.png</filename>
-            <filename>toufaqian_qingmu1.png</filename>
-            <filename>toufaqian_qingmu2.png</filename>
-            <filename>toufaqian_qingmu3.png</filename>
-            <filename>toufaqian_qingmu4.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

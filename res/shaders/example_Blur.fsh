@@ -7,7 +7,7 @@ varying vec2 v_texCoord;
 
 uniform vec2 resolution;
 uniform float blurRadius;
-const float sampleNum = 6.0;
+const float sampleNum = 2.0;
 
 vec4 blur(vec2);
 

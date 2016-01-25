@@ -16,7 +16,7 @@ function MainScene:ctor()
     --     :align(display.CENTER, display.cx, display.cy)
     --     :addTo(self)
     -- dump(G_EXCEL_TABLE_zOrders, "G_EXCEL_TABLE_zOrders")
-    self.handers = {
+    self.handlers = {
 		regCallBack("playPartEffect", handler(self, self.playPartEffect))
 	}
 end
@@ -84,11 +84,10 @@ function MainScene:initBody()
 
 end
 
-function MainScene:makeFile(v, z)
-	if not cc.FileUtils:getInstance():isFileExist("temp_" .. v .. ".png") then
-		print("make file " .. "temp_" .. v .. ".png")
+function MainScene:getSprite(v, z)
+	
 		local preSp = display.newSprite("#" .. v ..".png")
-		  :zorder(10)
+		  :zorder(0)
 		  :pos(Body.BodyPos.x, Body.BodyPos.y)
 	      :addTo(self)
 	    preSp:setScale(Body.BodyScale)
@@ -97,12 +96,12 @@ function MainScene:makeFile(v, z)
 	    renderTexture:begin()
 	    preSp:visit()
 	    renderTexture:endToLua()
-	    -- whiteSprite(renderTexture, light)
-	    renderTexture:saveToFile("temp_" .. v ..".png", cc.IMAGE_FORMAT_PNG)
-		
-		renderTexture:release()
-		preSp:removeSelf()
-	end
+      local sprite = renderTexture:getSprite()
+      sprite:retain()
+      sprite:removeSelf()
+  		renderTexture:release()
+  		preSp:removeSelf()
+    return sprite
 end
 
 function MainScene:playPartEffect(evt)
@@ -117,14 +116,12 @@ function MainScene:playPartEffect(evt)
 	local sp1s = {}
 	local radius = 1.0
 	local light = 1.0
-	for k, v in ipairs(reses) do
-		self:makeFile(v, zOrders[k])
-	end
+
 	actionNode:runAction(cc.Sequence:create(
 		cc.DelayTime:create(0.016),
 		cc.CallFunc:create(function()
 				for k, v in ipairs(reses) do
-			        local sprite = cc.Sprite:create("temp_" .. v ..".png")
+			        local sprite = self:getSprite(v, zOrders[k])
 			        -- print("sprite", sprite)
 			        -- sprite:setAnchorPoint(cc.p(0.5, 0.5))
 			        -- dump(sprite:getTextureRect())
@@ -134,7 +131,7 @@ function MainScene:playPartEffect(evt)
 			        whiteSprite(sprite, light)
 			        sps[#sps + 1] = sprite
 
-			        local sprite1 = cc.Sprite:create("temp_" .. v ..".png")
+			        local sprite1 = self:getSprite(v, zOrders[k])
 
 			        sprite1:pos(display.cx, display.cy)
 			        	  :zorder(gz(zOrders[k]))
@@ -152,7 +149,7 @@ function MainScene:playPartEffect(evt)
 								        v:getGLProgramState():setUniformFloat("blurRadius", radius)				            				      
 								    end
 								end
-						    	radius = radius + 5.0  
+						    	radius = radius + 2.0  
 						    else
 					        	for k, v in ipairs(sp1s) do			     	
 							        v:removeSelf()			            

@@ -36,7 +36,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../toufahou - 副本/toufahou{n}.pvr.ccz</filename>
+        <filename>toufahou{n}.pvr.ccz</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -127,7 +127,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../toufahou - 副本/toufahou{n}.plist</filename>
+                <filename>toufahou{n}.plist</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -166,29 +166,29 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../toufahou - 副本/toufahou_shasha1-0.png</filename>
-            <filename>../toufahou - 副本/toufahou_shasha1-1.png</filename>
-            <filename>../toufahou - 副本/toufahou_an1.png</filename>
-            <filename>../toufahou - 副本/toufahou_biaoge1.png</filename>
-            <filename>../toufahou - 副本/toufahou_fanzi1.png</filename>
-            <filename>../toufahou - 副本/toufahou_jiguan1.png</filename>
-            <filename>../toufahou - 副本/toufahou_jiguan2.png</filename>
-            <filename>../toufahou - 副本/toufahou_leno1.png</filename>
-            <filename>../toufahou - 副本/toufahou_leno2.png</filename>
-            <filename>../toufahou - 副本/toufahou_leno3.png</filename>
-            <filename>../toufahou - 副本/toufahou_luqi1.png</filename>
-            <filename>../toufahou - 副本/toufahou_meilu1.png</filename>
-            <filename>../toufahou - 副本/toufahou_ningzhu1.png</filename>
-            <filename>../toufahou - 副本/toufahou_ningzhu2.png</filename>
-            <filename>../toufahou - 副本/toufahou_ningzhu3.png</filename>
-            <filename>../toufahou - 副本/toufahou_ningzhu4.png</filename>
-            <filename>../toufahou - 副本/toufahou_ningzhu5.png</filename>
-            <filename>../toufahou - 副本/toufahou_qingmu1.png</filename>
-            <filename>../toufahou - 副本/toufahou_qingmu2.png</filename>
-            <filename>../toufahou - 副本/toufahou_qingmu3.png</filename>
-            <filename>../toufahou - 副本/toufahou_qingmu4.png</filename>
-            <filename>../toufahou - 副本/toufahou_qingmu5.png</filename>
-            <filename>../toufahou - 副本/toufahou_qingmu6.png</filename>
+            <filename>toufahou_ningzhu3.png</filename>
+            <filename>toufahou_ningzhu4.png</filename>
+            <filename>toufahou_ningzhu5.png</filename>
+            <filename>toufahou_qingmu1.png</filename>
+            <filename>toufahou_qingmu2.png</filename>
+            <filename>toufahou_qingmu3.png</filename>
+            <filename>toufahou_qingmu4.png</filename>
+            <filename>toufahou_qingmu5.png</filename>
+            <filename>toufahou_qingmu6.png</filename>
+            <filename>toufahou_shasha1-0.png</filename>
+            <filename>toufahou_shasha1-1.png</filename>
+            <filename>toufahou_an1.png</filename>
+            <filename>toufahou_biaoge1.png</filename>
+            <filename>toufahou_fanzi1.png</filename>
+            <filename>toufahou_jiguan1.png</filename>
+            <filename>toufahou_jiguan2.png</filename>
+            <filename>toufahou_leno1.png</filename>
+            <filename>toufahou_leno2.png</filename>
+            <filename>toufahou_leno3.png</filename>
+            <filename>toufahou_luqi1.png</filename>
+            <filename>toufahou_meilu1.png</filename>
+            <filename>toufahou_ningzhu1.png</filename>
+            <filename>toufahou_ningzhu2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

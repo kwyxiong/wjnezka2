@@ -12,7 +12,7 @@ function Body:ctor()
 	self:init()
 	self:setScale(self.BodyScale)
 
-	self.handers = {
+	self.handlers = {
 		-- regCallBack("playPartEffect", handler(self, self.playPartEffect))
 	}
 	self:setNodeEventEnabled(true)
@@ -51,51 +51,24 @@ function Body:playPartEffect(evt)
 	local sps = {}
 	local sp1s = {}
 	local radius = 1.0
-
+	local light = 1.0
 	for k, v in ipairs(reses) do
-	    local light = 1.0
+	    
 	    local sp = display.newSprite("#" .. v ..".png")
 	      :zorder(gz(zOrders[k]))
 	      :addTo(self)
-	    
-	    local renderTexture = cc.RenderTexture:create(display.width, display.height, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
-	    renderTexture:retain()
-	    renderTexture:setScale(1/0.43)
-	    self:addChild(renderTexture, -1)
-	   	-- cc.Director:getInstance():getRunningScene():addChild(renderTexture, 999999)
-	    renderTexture:setPosition(display.cx - 140, display.cy - 40)
-	    renderTexture:begin()
-	    sp:visit()
-	    renderTexture:endToLua()
-	    sp = renderTexture
-	    -- whiteSprite(renderTexture, light)
-	    renderTexture:saveToFile("temp_" .. v ..".png", cc.IMAGE_FORMAT_PNG)
-	   
+	    whiteSprite(sp, light)
+	   sps[#sps + 1] = sp
         -- local pImage = renderTexture:newImage()
         -- local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, v .."11.png")
   		
   		-- print("tex", tex)
-        local sprite = cc.Sprite:create("temp_" .. v ..".png")
-        -- print("sprite", sprite)
-        -- sprite:setAnchorPoint(cc.p(0.5, 0.5))
-        -- dump(sprite:getTextureRect())
-        sprite:setPosition(display.cx, display.cy)
-        -- sprite:setScale(0.2)
-        cc.Director:getInstance():getRunningScene():addChild(sprite, 999999)
-        -- pImage:release()
-        whiteSprite(sprite, light)
-         sps[#sps + 1] = sprite
-
-        local sprite = cc.Sprite:create("temp_" .. v ..".png")
-        -- print("sprite", sprite)
-        -- sprite:setAnchorPoint(cc.p(0.5, 0.5))
-        -- dump(sprite:getTextureRect())
-        sprite:setPosition(display.cx , display.cy)
-        -- sprite:setScale(0.2)
-        cc.Director:getInstance():getRunningScene():addChild(sprite, 999999)
-        -- pImage:release()
-       blurSprite(sprite,radius)
-         sp1s[#sp1s + 1] = sprite
+	    local sp1 = display.newSprite("#" .. v ..".png")
+	      :zorder(gz(zOrders[k]))
+	      :addTo(self)
+	   
+       blurSprite(sp1,radius)
+         sp1s[#sp1s + 1] = sp1
 
 	    -- local sp1 = cc.Sprite:create(v ..".png")
 	    --   :zorder(gz(zOrders[k]))
