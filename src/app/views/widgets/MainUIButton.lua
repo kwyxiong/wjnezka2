@@ -24,7 +24,7 @@ function MainUIButton:init()
 	self.pressedSprite2 = display.newSprite(self.imageFile)
 		:addTo(self)
 	self.pressedSprite2:setVisible(false)
-	blurSprite(self.pressedSprite2,5.0)
+	blurSprite(self.pressedSprite2,1.0)
 
 	self.button:onButtonPressed(function() 
 			

@@ -2,6 +2,7 @@
 -- Author: Your Name
 -- Date: 2016-01-16 16:09:35
 --
+local LabelButton = require("app.views.widgets.LabelButton")
 local MyPageView = require("app.views.widgets.MyPageView")
 local MainUIButton = require("app.views.widgets.MainUIButton")
 local MainUI = class("MainUI", function() 
@@ -10,10 +11,17 @@ local MainUI = class("MainUI", function()
 
 function MainUI:ctor()
 	self.partData = {
-		G_EXCEL_TABLE_faxing
+		{G_EXCEL_TABLE_faxing},
+		{G_EXCEL_TABLE_shangyi,G_EXCEL_TABLE_waitao},
 	}
 	self.myPageViews = {}
+	self.bigPart = 1
+	self.smallPart = 1
 	self:init()
+
+	-- local labelButton = LabelButton.new()
+	-- 	:addTo(self, 9999)
+
 end
 
 function MainUI:initLeftButton()
@@ -39,23 +47,26 @@ function MainUI:init()
 
 	self:initLeftButton()
 
-	self:showPart(1)
+	self:showPart(2, 2)
 	
 end
 
-function MainUI:showPart(index)
-	if not self.myPageViews[index] then
+function MainUI:showPart(bigPart, smallPart)
+	if  not self.myPageViews[bigPart] or not self.myPageViews[bigPart][smallPart] then
+		if not self.myPageViews[bigPart] then
+			self.myPageViews[bigPart] = {}
+		end
 		local myPageView =  MyPageView.new()
 			:pos(40, 0)
 			:addTo(self)
-			-- dump(self.partData[index])
-		for k, v in ipairs(self.partData[index]) do
+			-- dump(self.partData[bigPart])
+		for k, v in ipairs(self.partData[bigPart][smallPart]) do
 			myPageView:addItemData(v)
 		end
-		self.myPageViews[index] = myPageView
+		self.myPageViews[bigPart][smallPart] = myPageView
 	end
 	
-	self.myPageViews[index]:showPage(1)
+	self.myPageViews[bigPart][smallPart]:showPage(1)
 end
 
 

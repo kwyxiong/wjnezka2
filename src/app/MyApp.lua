@@ -26,6 +26,7 @@ function MyApp:run()
 	"shangzhuang",
 	"toufaqian",
 	"shipin",
+	"waitaohou"
 	}
     cc.FileUtils:getInstance():addSearchPath("res/")
     cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())

@@ -2,6 +2,7 @@
 -- Author: kwyxiong
 -- Date: 2016-01-19 16:48:06
 --
+local MainUIButton = require("app.views.widgets.MainUIButton")
 local ViewBox = require("app.views.widgets.ViewBox")
 local MyPageView = class("MyPageView", function() 
 		return display.newNode()
@@ -10,6 +11,7 @@ local MyPageView = class("MyPageView", function()
 function MyPageView:ctor()
 	self.row = 3
 	self.col = 3
+	self.curPage = 1
 	self.numPerPage = self.row * self.col
 	self.disX = 105
 	self.disY = 150
@@ -22,10 +24,31 @@ function MyPageView:ctor()
 end
 
 function MyPageView:init()
+	self.preButton = MainUIButton.new("pre.png")
+		:pos(-78, -240)
+		:addTo(self)
+		:onButtonClicked(function() 
+				self:showPage(self.curPage - 1)
+			end)
+
+
+	self.nextButton = MainUIButton.new("next.png")
+		:pos(78, -240)
+		:addTo(self)
+		:onButtonClicked(function() 
+				self:showPage(self.curPage + 1)
+			end)
+
+	self.label = cc.ui.UILabel.new({text = "1/4", size = 18})
+		:pos(0, -240)
+		:addTo(self)
+	self.label:setColor(cc.c3b(222, 222, 222))
+	self.label:setAnchorPoint(cc.p(0.5, 0.5))
 
 end
 
 function MyPageView:createItemByData(itemData)
+	print("createItem " .. #self.items)
 	local viewBox = ViewBox.new(itemData)
 	return viewBox
 end
@@ -34,6 +57,21 @@ function MyPageView:addItemData(itemData)
 
 	self.itemDatas[#self.itemDatas + 1] = itemData
 	
+end
+
+function MyPageView:updateBottom()
+	local pageNum = math.ceil(#self.itemDatas/self.numPerPage)
+	self.label:setString(self.curPage .. "/" .. pageNum)
+	if self.curPage < pageNum then
+		self.nextButton:setVisible(true)
+	else
+		self.nextButton:setVisible(false)
+	end
+	if self.curPage > 1 then
+		self.preButton:setVisible(true)
+	else
+		self.preButton:setVisible(false)
+	end
 end
 
 function MyPageView:showPage(pageIndex)
@@ -67,6 +105,9 @@ function MyPageView:showPage(pageIndex)
 			end
 		end
 	end
+
+	self.curPage = pageIndex
+	self:updateBottom()
 end
 
 

@@ -84,7 +84,7 @@ function LoadingScene:ctor()
  	-- local allRes = {"toufahou_0", "toufahou_1",
  	--  "toufaqian_0"}
  	local allRes = {"toufahou0", "toufahou1",
- 	 "toufaqian0"}
+ 	 "toufaqian0","shangzhuang0", "shangzhuang1", "waitaohou0"}
   	-- local allRes = {"aa0"}	 
     local loadedNum = 0
     local allNum = #allRes
